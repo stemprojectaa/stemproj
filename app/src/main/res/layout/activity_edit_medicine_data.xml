@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lightblue"
+    >
+
+
+    <EditText
+        android:id="@+id/dosageAmount"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/medicineName"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/medicineName"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_shape"
+        android:onClick="Save"
+        android:text="Save"
+        android:textColor="#F7FF1C" />
+
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/startDate"
+        android:background="@drawable/button_shape"
+        android:onClick="clear"
+        android:text="Clear"
+        android:textColor="#F7FF1C" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/dosageAmount"
+        android:background="@drawable/button_shape"
+        android:text="Home"
+        android:textColor="#F7FF1C" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/btnSave"
+        android:layout_below="@+id/btnSave"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="97dp"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="250dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dosageAmount"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+
+    <Button
+        android:id="@+id/btn_start_date"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/startDate"
+        android:layout_alignBottom="@+id/startDate"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_shape"
+        android:textColor="#F7FF1C"
+        android:text="Select" />
+
+    <EditText
+        android:id="@+id/startTime"
+        android:layout_width="250dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btn_start_time"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/btn_start_date"
+        android:layout_alignTop="@+id/startTime"
+        android:background="@drawable/button_shape"
+        android:textColor="#F7FF1C"
+        android:text="Select" />
+
+    <EditText
+        android:id="@+id/homephone"
+        android:layout_width="335dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/cellphone"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/cellphone"
+        android:layout_width="335dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/btnSave"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+</RelativeLayout>

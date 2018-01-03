@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lightblue"
+    >
+
+    <TextView
+        android:id="@+id/cellphone"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/homephone"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Cell Phone No:"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/homephone"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/startTime"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Home Phone No:"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/medicineName"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:hint="Medicine:"
+        android:orientation="vertical"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/dosageAmount"
+        android:layout_width="320dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/medicineName"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:backgroundTint="@color/colorYellow"
+        android:hint="Dosage:"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dosageAmount"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Starting Date:"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/startDate"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Starting Time:"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+
+    <Button
+        android:id="@+id/btnDelay"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnTake"
+        android:layout_marginStart="70dp"
+        android:background="@drawable/button_shape"
+        android:text="Delay"
+        android:textColor="#F7FF1C" />
+
+
+    <Button
+        android:id="@+id/btnDontTake"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/btnDelay"
+        android:background="@drawable/button_shape"
+        android:text="Dont Take"
+        android:textColor="#F7FF1C" />
+
+    <Button
+        android:id="@+id/btnTake"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_shape"
+        android:text="Take"
+        android:textColor="#F7FF1C" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/btnDontTake"
+        android:background="@drawable/button_shape"
+        android:text="Home"
+        android:textColor="#F7FF1C" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/btnHome"
+        android:layout_below="@+id/btnHome"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="97dp"
+        android:id="@+id/tableLayout">
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </TableLayout>
+
+</RelativeLayout>
+
+
+
+
+
+

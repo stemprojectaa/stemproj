@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Medical Adherence App</string>
+    <string name="write_medname">Write name of medicine.</string>
+    <string name="write_doseamt">Write # dose amt in mg/ml.</string>
+    <string name="mednum">How many medicines do you take?</string>
+    <string name="prompt_home_phone">Please Enter Home Phone:</string>
+    <string name="prompt_cell_phone">Please Enter Cell Phone</string>
+    <string name="please_enter_phone_number">Please enter phone number.</string>
+    <string name="confirm">Confirm</string>
+    <integer-array name="medAmtNum">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+    <string name="title_activity_sent_sms">SentSMSActivity</string>
+    <string name="dose_prompt">Pick dosage</string>
+    <string-array name="dose_values">
+        <item>mg</item>
+        <item>ml</item>
+    </string-array>
+</resources>
+
+    <!--add many more-->

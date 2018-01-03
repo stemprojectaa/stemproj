@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="aa_stem.finallogscreen">
+
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CreatePhoneNumber" />
+
+        <receiver android:name=".AlarmReciever" />
+
+        <activity
+            android:name=".SentSMSActivity"
+            android:label="@string/title_activity_sent_sms"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MedicineTakenConfirmation" />
+        <activity android:name=".MedicineDelayConfirmation" />
+        <activity android:name=".MedicineNotTakenConfirmation" />
+        <activity android:name=".BasicSetup" />
+        <activity android:name=".OptionsScreen" />
+        <activity android:name=".EditMedicineData" />
+    </application>
+
+</manifest>
