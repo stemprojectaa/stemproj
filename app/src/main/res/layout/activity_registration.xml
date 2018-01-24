@@ -1,9 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aa_stem.finallogscreen.Registration">
+    android:background="@drawable/lightblue"
+    >
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="235dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/edit_text_rounded"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Username (required)"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="235dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/email"
+        android:layout_alignStart="@+id/email"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/edit_text_rounded"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Password (required)"
+        android:inputType="text"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="235dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/dateofbirth"
+        android:layout_alignStart="@+id/dateofbirth"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/edit_text_rounded"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Email (required)"
+        android:inputType="text"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="235dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/registration"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="54dp"
+        android:background="@drawable/edit_text_rounded"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Gender (optional)"
+        android:inputType="text"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/dateofbirth"
+        android:layout_width="235dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/gender"
+        android:layout_alignStart="@+id/gender"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/edit_text_rounded"
+        android:backgroundTint="@color/colorYellow"
+        android:ems="10"
+        android:hint="Date Of Birth (optional)"
+        android:inputType="text"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/registration"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btnHome"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/button_shape"
+        android:onClick="Save"
+        android:text="Save"
+        android:textColor="#F7FF1C" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_toEndOf="@+id/registration"
+        android:background="@drawable/button_shape"
+        android:text="Home"
+        android:textColor="#F7FF1C" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/gender"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/btnHome"
+        android:background="@drawable/button_shape"
+        android:text="Login"
+        android:textColor="#F7FF1C" />
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+

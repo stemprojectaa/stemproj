@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +35,15 @@
         <activity android:name=".BasicSetup" />
         <activity android:name=".OptionsScreen" />
         <activity android:name=".EditMedicineData" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity android:name=".ImageRecognition" />
+        <activity android:name=".Registration" />
+        <activity android:name=".Login" />
+        <activity android:name=".MedicalHistory"></activity>
     </application>
 
 </manifest>

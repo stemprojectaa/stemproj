@@ -30,6 +30,7 @@ public class UserSessionManagement {
 
     // User name (make variable public to access from outside)
     public static final String KEY_NAME = "name";
+    public static final String KEY_PASSWORD = "password";
 
     // Email address (make variable public to access from outside)
     public static final String KEY_EMAIL = "email";
@@ -51,12 +52,13 @@ public class UserSessionManagement {
     }
 
     //Create login session
-    public void createUserLoginSession(String name, String email){
+    public void createUserLoginSession(String name, String password, String email){
         // Storing login value as TRUE
         editor.putBoolean(IS_USER_LOGIN, true);
 
         // Storing name in pref
         editor.putString(KEY_NAME, name);
+        editor.putString(KEY_PASSWORD, password);
 
         // Storing email in pref
         editor.putString(KEY_EMAIL, email);
@@ -137,6 +139,8 @@ public class UserSessionManagement {
 
         // user name
         user.put(KEY_NAME, pref.getString(KEY_NAME, null));
+
+        user.put(KEY_PASSWORD, pref.getString(KEY_PASSWORD, null));
 
         // user email id
         user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));

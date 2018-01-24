@@ -97,8 +97,6 @@ public class EditMedicineData extends AppCompatActivity implements View.OnClickL
 
 
 
-
-
         Button btnHome = (Button) findViewById(R.id.btnHome);
         //button click event
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -175,24 +173,12 @@ public class EditMedicineData extends AppCompatActivity implements View.OnClickL
     }
 
     public void Save(View view) {
-        Map<String, ?> allEntries = sharedPreferences.getAll();
-        for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
-            Log.d("map values", entry.getKey() + ": " + entry.getValue().toString());
-        }
 
         med_name = inputmedicineName.getText().toString();
         dose_amt = inputdosageAmount.getText().toString();
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear();
-        editor.putString(f_medicine_name, med_name);
-        editor.putString(f_dosage_amount, dose_amt);
-        editor.putString(f_start_date,txtStartDate.getText().toString());
-        editor.putString(f_start_time,txtStartTime.getText().toString());
-        editor.putString(f_home_phone,txtHomePhone.getText().toString());
-        editor.putString(f_cell_phone,txtCellPhone.getText().toString());
-        editor.commit();
-        Toast.makeText(getApplicationContext(),"Information is now saved.",Toast.LENGTH_LONG).show();
         session.saveMedValues(med_name,dose_amt,txtStartDate.getText().toString(),txtStartTime.getText().toString());
+        session.savePhoneValues(txtHomePhone.getText().toString(),txtCellPhone.getText().toString());
+        Toast.makeText(getApplicationContext(),"Information is now saved.",Toast.LENGTH_LONG).show();
     }
 
     public void clear(View view) {

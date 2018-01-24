@@ -13,11 +13,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button buttonLogin = findViewById(R.id.buttonLogin);
+        final Button buttonRegister = findViewById(R.id.buttonRegister);
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), OptionsScreen.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
+
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Registration.class));
+            }
+        });
+
     }
 }

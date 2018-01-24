@@ -102,7 +102,7 @@ public class CreatePhoneNumber extends AppCompatActivity {
                 phoneNo = inputcellphone.getText().toString();
                 homePhoneNo = inputhomehome.getText().toString();
                 Log.v("phone:",phoneNo);
-                String sms = "Hello...";
+                String sms = "Your schedule has now been set. You will be reminded when you are ready to start taking medication.";
 
 
                 //Validating AlarmService

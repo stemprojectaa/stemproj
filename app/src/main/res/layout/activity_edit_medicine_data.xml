@@ -8,33 +8,33 @@
     <EditText
         android:id="@+id/dosageAmount"
         android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="45dp"
+        android:layout_alignStart="@+id/startDate"
         android:layout_below="@+id/medicineName"
-        android:background="@drawable/edit_text_border"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
-        android:layout_marginTop="5dp"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textStyle="italic" />
 
     <EditText
         android:id="@+id/medicineName"
         android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="45dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="11dp"
-        android:background="@drawable/edit_text_border"
+        android:layout_alignStart="@+id/dosageAmount"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textStyle="italic" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_shape"
@@ -46,7 +46,7 @@
     <Button
         android:id="@+id/btnClear"
         android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/startDate"
         android:background="@drawable/button_shape"
@@ -57,7 +57,7 @@
     <Button
         android:id="@+id/btnHome"
         android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/dosageAmount"
         android:background="@drawable/button_shape"
@@ -97,76 +97,76 @@
     <EditText
         android:id="@+id/startDate"
         android:layout_width="250dp"
-        android:layout_height="62dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="45dp"
         android:layout_below="@+id/dosageAmount"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edit_text_border"
+        android:layout_marginTop="42dp"
+        android:layout_toStartOf="@+id/btn_start_date"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textStyle="italic" />
 
 
     <Button
         android:id="@+id/btn_start_date"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/startDate"
-        android:layout_alignBottom="@+id/startDate"
+        android:layout_height="30dp"
+        android:layout_above="@+id/startTime"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/button_shape"
-        android:textColor="#F7FF1C"
-        android:text="Select" />
+        android:text="Select"
+        android:textColor="#F7FF1C" />
 
     <EditText
         android:id="@+id/startTime"
         android:layout_width="250dp"
-        android:layout_height="62dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/edit_text_border"
+        android:layout_height="45dp"
+        android:layout_below="@+id/startDate"
+        android:layout_marginTop="38dp"
+        android:layout_toStartOf="@+id/btn_start_time"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textStyle="italic" />
 
     <Button
         android:id="@+id/btn_start_time"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignStart="@+id/btn_start_date"
-        android:layout_alignTop="@+id/startTime"
+        android:layout_height="30dp"
+        android:layout_above="@+id/homephone"
+        android:layout_toEndOf="@+id/startDate"
         android:background="@drawable/button_shape"
-        android:textColor="#F7FF1C"
-        android:text="Select" />
+        android:text="Select"
+        android:textColor="#F7FF1C" />
 
     <EditText
         android:id="@+id/homephone"
         android:layout_width="335dp"
-        android:layout_height="65dp"
-        android:layout_above="@+id/cellphone"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/edit_text_border"
+        android:layout_height="45dp"
+        android:layout_alignStart="@+id/startTime"
+        android:layout_below="@+id/startTime"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
         android:inputType="text"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textStyle="italic" />
 
     <EditText
         android:id="@+id/cellphone"
         android:layout_width="335dp"
-        android:layout_height="65dp"
-        android:layout_above="@+id/btnSave"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="17dp"
-        android:background="@drawable/edit_text_border"
+        android:layout_height="45dp"
+        android:layout_alignStart="@+id/homephone"
+        android:layout_below="@+id/homephone"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
         android:ems="10"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:textStyle="italic" />
 
 </RelativeLayout>

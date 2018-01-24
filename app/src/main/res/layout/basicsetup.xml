@@ -7,38 +7,39 @@
 
     <EditText
         android:id="@+id/dosageAmount"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_alignStart="@+id/startDate"
         android:layout_below="@+id/medicineName"
-        android:layout_marginTop="39dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
-        android:textStyle="italic"
-        android:textSize="25dp"
-        android:hint="Dosage Amount" />
+        android:ems="10"
+        android:hint="Dosage Amount"
+        android:textSize="18dp"
+        android:textStyle="italic" />
 
     <EditText
         android:id="@+id/medicineName"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:layout_alignStart="@+id/dosageAmount"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
-        android:textStyle="italic"
-        android:textSize="25dp"
-        android:hint="Medicine Name" />
+        android:ems="10"
+        android:hint="Medicine Name"
+        android:textSize="18dp"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/btnVerifyInput"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/startTime"
+        android:layout_marginBottom="56dp"
         android:background="@drawable/button_shape"
         android:onClick="Save"
         android:text="Save"
@@ -47,11 +48,9 @@
     <Button
         android:id="@+id/btnVerifyInput"
         android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/btnHome"
-        android:layout_alignBottom="@+id/btnHome"
-        android:layout_marginEnd="13dp"
-        android:layout_toStartOf="@+id/btnHome"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_toEndOf="@+id/btnSave"
         android:background="@drawable/button_shape"
         android:text="Add Phone"
         android:textColor="#F7FF1C" />
@@ -59,11 +58,9 @@
     <Button
         android:id="@+id/btnClear"
         android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/btnHome"
-        android:layout_alignBottom="@+id/btnHome"
-        android:layout_marginEnd="17dp"
-        android:layout_toStartOf="@+id/btnVerifyInput"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/btnHome"
+        android:layout_toStartOf="@+id/btnHome"
         android:background="@drawable/button_shape"
         android:onClick="clear"
         android:text="Clear"
@@ -72,93 +69,62 @@
     <Button
         android:id="@+id/btnHome"
         android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="31dp"
-        android:layout_toEndOf="@+id/dosageAmount"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_marginEnd="11dp"
         android:background="@drawable/button_shape"
         android:text="Home"
         android:textColor="#F7FF1C" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignEnd="@+id/btnSave"
-        android:layout_below="@+id/btnSave"
-        android:layout_marginEnd="11dp"
-        android:layout_marginTop="97dp"
-        android:id="@+id/tableLayout">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </TableLayout>
-
     <EditText
         android:id="@+id/startDate"
         android:layout_width="220dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="45dp"
+        android:layout_alignStart="@+id/startTime"
         android:layout_centerVertical="true"
-        android:ems="10"
-        android:textStyle="italic"
-        android:textSize="25dp"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
-        android:background="@drawable/edit_text_border"
-        android:hint="Pick Start Date" />
+        android:ems="10"
+        android:hint="Pick Start Date"
+        android:textSize="18dp"
+        android:textStyle="italic" />
 
 
     <Button
         android:id="@+id/btn_start_date"
         android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/startDate"
+        android:layout_height="30dp"
         android:layout_alignBottom="@+id/startDate"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/button_shape"
-        android:textColor="#F7FF1C"
-        android:text="Select" />
+        android:text="Select"
+        android:textColor="#F7FF1C" />
 
     <EditText
         android:id="@+id/startTime"
         android:layout_width="220dp"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="45dp"
         android:layout_below="@+id/startDate"
-        android:layout_marginTop="24dp"
-        android:ems="10"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="32dp"
+        android:layout_toStartOf="@+id/btn_start_time"
+        android:background="@drawable/edit_text_rounded"
         android:backgroundTint="@color/colorYellow"
-        android:textStyle="italic"
-        android:textSize="25dp"
-        android:background="@drawable/edit_text_border"
-        android:hint="Pick Start Time" />
+        android:ems="10"
+        android:hint="Pick Start Time"
+        android:textSize="18dp"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/btn_start_time"
         android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_alignStart="@+id/btn_start_date"
-        android:layout_alignTop="@+id/startTime"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/startTime"
+        android:layout_alignParentEnd="true"
         android:background="@drawable/button_shape"
-        android:textColor="#F7FF1C"
-        android:text="Select" />
+        android:text="Select"
+        android:textColor="#F7FF1C" />
 
 </RelativeLayout>
 

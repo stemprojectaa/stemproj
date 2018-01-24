@@ -50,6 +50,12 @@ public class OptionsScreen extends AppCompatActivity {
         });
 
 
+        final Button medHistory = findViewById(R.id.history);
+        medHistory.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MedicalHistory.class));
+            }
+        });
 
     }
 }

@@ -88,6 +88,13 @@ public class MedicineDelayConfirmation extends AppCompatActivity {
 
 
         Button btnHome = (Button) findViewById(R.id.btnHome);
+        Button btnBack = (Button) findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SentSMSActivity.class));
+            }
+        });
 
         //button click event
         btnHome.setOnClickListener(new View.OnClickListener() {
