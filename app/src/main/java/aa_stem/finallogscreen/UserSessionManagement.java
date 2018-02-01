@@ -1,12 +1,15 @@
 package aa_stem.finallogscreen;
 
 
+import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Bitmap;
+import android.util.Base64;
 
 public class UserSessionManagement {
 
@@ -42,6 +45,9 @@ public class UserSessionManagement {
     public static final String KEY_START_TIME = "start_time";
     public static final String KEY_HOME_PHONE = "homephone";
     public static final String KEY_CELL_PHONE = "cellphone";
+    public static final String KEY_MEDICINE_IMAGE = "medicineimage";
+
+    //public static final String str_bitmap;
 
 
     // Constructor
@@ -68,11 +74,14 @@ public class UserSessionManagement {
     }
 
     public void saveMedValues(String medical_name,String dose_amount,String start_date,String start_time){
-        editor.putString(KEY_MEDICINE_NAME,medical_name);
-        editor.putString(KEY_DOSAGE_AMOUNT,dose_amount);
-        editor.putString(KEY_START_DATE,start_date);
-        editor.putString(KEY_START_TIME,start_time);
-        editor.commit();
+
+            editor.putString(KEY_MEDICINE_NAME, medical_name);
+            editor.putString(KEY_DOSAGE_AMOUNT, dose_amount);
+            editor.putString(KEY_START_DATE, start_date);
+            editor.putString(KEY_START_TIME, start_time);
+            //editor.putString()
+            editor.commit();
+
     }
 
     public void savePhoneValues(String home_phone,String cell_phone){
@@ -80,6 +89,17 @@ public class UserSessionManagement {
         editor.putString(KEY_CELL_PHONE,cell_phone);
         editor.commit();
     }
+
+    public void saveImage(Bitmap med_image){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        med_image.compress(Bitmap.CompressFormat.PNG,100,baos);
+        byte[] arr = baos.toByteArray();
+        editor.putString(Base64.encodeToString(arr,Base64.DEFAULT),KEY_MEDICINE_IMAGE);
+        editor.commit();
+    }
+
+
+
 
     /**
      * Check login method will check user login status
@@ -108,6 +128,12 @@ public class UserSessionManagement {
     }
 
 
+    public HashMap<String, String> getMedicalImage(){
+        HashMap<String, String> imgdetails = new HashMap<>();
+        imgdetails.put(KEY_MEDICINE_IMAGE,pref.getString(KEY_MEDICINE_NAME,null));
+
+        return imgdetails;
+    }
     /**
      * Get stored session data for Medical Values
      * */

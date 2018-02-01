@@ -91,6 +91,9 @@ public class CreatePhoneNumber extends AppCompatActivity {
 
 
         Button btnHome = (Button) findViewById(R.id.btnHome);
+        Button btnImage = (Button) findViewById(R.id.btnTakeImage);
+
+        /*
         Button btnSchedule = (Button) findViewById(R.id.btnSchedule);
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.SEND_SMS},1);
 
@@ -104,8 +107,6 @@ public class CreatePhoneNumber extends AppCompatActivity {
                 Log.v("phone:",phoneNo);
                 String sms = "Your schedule has now been set. You will be reminded when you are ready to start taking medication.";
 
-
-                //Validating AlarmService
 
                 String[] fields = start_Time.split(":");
                 String hour = fields[0];
@@ -125,24 +126,6 @@ public class CreatePhoneNumber extends AppCompatActivity {
                 Log.v("TimeAlert: ",time.toString());
 
 
-                /*alarmMgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                Log.v("TimeAlert1: ",time.toString());
-                Intent a_intent = new Intent(context,AlarmReceiver.class);
-                Log.v("TimeAlert2: ",time.toString());
-                alarmIntent = PendingIntent.getBroadcast(context,0,a_intent,0);
-                Log.v("TimeAlert3: ",time.toString());
-
-                Calendar calendar = Calendar.getInstance();
-                calendar.setTimeInMillis(time);
-                calendar.set(Calendar.HOUR_OF_DAY,new Integer(hour).intValue());
-                calendar.set(Calendar.MINUTE,new Integer(min).intValue());
-                Log.v("TimeAlert4: ",time.toString());
-                alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP,time,1000*60*1,alarmIntent);
-                */
-
-
-                //End of AlarmService
-
                 try {
                     SmsManager smsManager = SmsManager.getDefault();
                     smsManager.sendTextMessage(phoneNo, null, sms, null, null);
@@ -157,8 +140,6 @@ public class CreatePhoneNumber extends AppCompatActivity {
                     Log.d("Timestamp::::",String.valueOf(mediaPlayer.getTimestamp().getAnchorSytemNanoTime()));
                     Log.d("Timestamp::::",String.valueOf(mediaPlayer.getTimestamp().getMediaClockRate()));
 
-
-                    //Log.dmediaPlayer.getTimestamp().getAnchorMediaTimeUs());
 
 
                     Thread th = new Thread(new Runnable() {
@@ -207,6 +188,7 @@ public class CreatePhoneNumber extends AppCompatActivity {
 
             }
         });
+        */
 
         //button click event
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -229,6 +211,29 @@ public class CreatePhoneNumber extends AppCompatActivity {
                 alertDialog.show();
             }
         });
+
+        //button click event
+        btnImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(CreatePhoneNumber.this);
+
+                alertDialog.setTitle("Create Alert");
+                alertDialog.setMessage("Here, you will be taking an Image of the Medicine. Please Continue..");
+
+
+                alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Intent i = new Intent(getApplicationContext(),CaptureImage.class);
+                        startActivity(i);
+                    }
+                });
+
+                alertDialog.show();
+            }
+        });
+
 
 
     }

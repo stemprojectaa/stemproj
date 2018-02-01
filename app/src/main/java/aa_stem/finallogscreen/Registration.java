@@ -1,8 +1,11 @@
 package aa_stem.finallogscreen;
 
 import android.app.AlertDialog;
+import android.app.Application;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +20,7 @@ import java.io.FileOutputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.IOException;
 
 public class Registration extends AppCompatActivity {
 
@@ -96,8 +100,28 @@ public class Registration extends AppCompatActivity {
 
     public void writeToFile(View view){
 
+
         File innerpath = getApplicationContext().getFilesDir();
         File outerpath = getApplicationContext().getExternalFilesDir(null);
+
+        try {
+            File root = Environment.getExternalStorageDirectory();
+            File dir = new File(root.getAbsolutePath() + "/logfiles");
+            dir.mkdir();
+            File file = new File(dir,"traceinfo.txt");
+
+            Log.d("rootpath: ",root.getAbsolutePath().toString());
+            Log.d("rootpath_1: ",root.getCanonicalPath().toString());
+            Log.d("rootpath_2: ",root.getPath().toString());
+            Log.d("rootpath_3: ",root.getCanonicalPath().toString());
+            Log.d("rootpath_3: ",file.getCanonicalPath().toString());
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+
+
 
         Log.d("Innerpath: ",innerpath.getName().toString());
         Log.d("Outer: ",outerpath.getName().toString());

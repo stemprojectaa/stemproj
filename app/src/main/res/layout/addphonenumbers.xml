@@ -94,9 +94,9 @@
         android:id="@+id/btnSave"
         android:layout_width="120dp"
         android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="28dp"
+        android:layout_below="@+id/cellphone"
+        android:layout_marginTop="31dp"
         android:background="@drawable/button_shape"
         android:onClick="Save"
         android:text="Save"
@@ -107,11 +107,22 @@
         android:layout_width="110dp"
         android:layout_height="30dp"
         android:layout_alignTop="@+id/btnSave"
-        android:layout_toStartOf="@+id/btnSchedule"
+        android:layout_toEndOf="@+id/btnSave"
         android:background="@drawable/button_shape"
         android:text="Home"
         android:textColor="#F7FF1C" />
 
+    <Button
+        android:id="@+id/btnTakeImage"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/btnHome"
+        android:layout_toEndOf="@+id/startTime"
+        android:background="@drawable/button_shape"
+        android:text="Take Image"
+        android:textColor="#F7FF1C" />
+
+    <!--
     <Button
         android:id="@+id/btnSchedule"
         android:layout_width="130dp"
@@ -121,6 +132,7 @@
         android:background="@drawable/button_shape"
         android:text="schedule Alarm"
         android:textColor="#F7FF1C" />
+        -->
 
     <TableLayout
         android:layout_width="match_parent"
