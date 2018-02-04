@@ -47,6 +47,10 @@ public class UserSessionManagement {
     public static final String KEY_CELL_PHONE = "cellphone";
     public static final String KEY_MEDICINE_IMAGE = "medicineimage";
 
+    public String username;
+    public String password;
+    public String email;
+
     //public static final String str_bitmap;
 
 
@@ -72,6 +76,32 @@ public class UserSessionManagement {
         // commit changes
         editor.commit();
     }
+
+    public void setKeyName(String username){
+        this.username = username;
+    }
+
+    public String getKeyName(){
+        return this.username;
+    }
+
+    public void setKeyPassword(String password){
+        this.password = password;
+    }
+
+    public String getKeyPassword(){
+        return this.password;
+    }
+
+    public void setKeyEmail(String email){
+        this.email = email;
+    }
+
+
+    public String getKeyEmail(){
+        return this.email;
+    }
+
 
     public void saveMedValues(String medical_name,String dose_amount,String start_date,String start_time){
 

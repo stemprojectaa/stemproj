@@ -59,6 +59,7 @@ public class CreatePhoneNumber extends AppCompatActivity {
     private AlarmManager alarmMgr;
     private PendingIntent alarmIntent;
     UserSessionManagement session;
+    DatabaseManagement databaseManagement;
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -77,6 +78,7 @@ public class CreatePhoneNumber extends AppCompatActivity {
         viewpromptStartTime = (TextView) findViewById(R.id.startTime);
 
         session = new UserSessionManagement(getApplicationContext());
+        databaseManagement = new DatabaseManagement(this);
 
         HashMap<String,String> medicalDetails = session.getMedicalDetails();
         medicine_name = medicalDetails.get(UserSessionManagement.KEY_MEDICINE_NAME);
@@ -242,6 +244,17 @@ public class CreatePhoneNumber extends AppCompatActivity {
         home_phone = inputhomehome.getText().toString();
         cell_phone = inputcellphone.getText().toString();
         session.savePhoneValues(home_phone,cell_phone);
+        databaseManagement.addMedDetails( new UserDetailsAndMedicalDetails(
+                                        session.getKeyName()
+                                        ,session.getKeyPassword()
+                                        ,session.getKeyEmail()
+                                        ,medicine_name
+                                        ,dose_amt
+                                        ,start_Date
+                                        ,start_Time
+                                        ,cell_phone
+                                        ,home_phone
+                                        ));
         Toast.makeText(getApplicationContext(),"Information is now saved.",Toast.LENGTH_LONG).show();
     }
 

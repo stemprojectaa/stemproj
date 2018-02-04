@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Environment;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,7 @@ public class Registration extends AppCompatActivity {
 
     UserSessionManagement session;
     static final int READ_BLOCK_SIZE=100;
+    DatabaseManagement databaseManagement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         session = new UserSessionManagement(getApplicationContext());
+        databaseManagement = new DatabaseManagement(this);
 
         inputusername = (EditText) findViewById(R.id.username) ;
         inputpassword = (EditText) findViewById(R.id.password) ;
@@ -93,7 +96,25 @@ public class Registration extends AppCompatActivity {
 
         session.createUserLoginSession(username,password,email);
 
-        writeToFile(view);
+
+        File innerpath = getApplicationContext().getExternalFilesDir(null);
+        File dir = new File(innerpath.getPath() + "/logfiles");
+        Log.d("Directoryname:",dir.getPath());
+        dir.mkdir();
+        File file = new File(dir.getPath(),"trackinguser.txt");
+        Log.d("Filepath:",file.getPath());
+
+        try{
+            FileOutputStream stream = new FileOutputStream(file);
+            OutputStreamWriter outputwriter = new OutputStreamWriter(stream);
+            outputwriter.write("This is a test.");
+            outputwriter.flush();
+            outputwriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        //writeToFile(view);
 
         Toast.makeText(getApplicationContext(),"User Login session created.",Toast.LENGTH_LONG).show();
     }
@@ -102,11 +123,11 @@ public class Registration extends AppCompatActivity {
 
 
         File innerpath = getApplicationContext().getFilesDir();
-        File outerpath = getApplicationContext().getExternalFilesDir(null);
+        //File outerpath = getApplicationContext().getExternalFilesDir(null);
 
-        try {
-            File root = Environment.getExternalStorageDirectory();
-            File dir = new File(root.getAbsolutePath() + "/logfiles");
+        /*try {
+            File root = Environment.getDataDirectory();
+            File dir = new File(root.getPath() + "/logfiles");
             dir.mkdir();
             File file = new File(dir,"traceinfo.txt");
 
@@ -115,27 +136,32 @@ public class Registration extends AppCompatActivity {
             Log.d("rootpath_2: ",root.getPath().toString());
             Log.d("rootpath_3: ",root.getCanonicalPath().toString());
             Log.d("rootpath_3: ",file.getCanonicalPath().toString());
+            Log.d("filenameloc:",file.getAbsolutePath().toString());
 
         }catch (IOException e){
             e.printStackTrace();
-        }
+        }*/
 
 
 
 
         Log.d("Innerpath: ",innerpath.getName().toString());
-        Log.d("Outer: ",outerpath.getName().toString());
-        File file = new File(outerpath,"tracking.txt");
+        //Log.d("Outer: ",outerpath.getName().toString());
+        File file = new File(innerpath,"trackinguser2.txt");
 
 
         try{
 
             FileOutputStream stream = new FileOutputStream(file);
             OutputStreamWriter outputwriter = new OutputStreamWriter(stream);
+            outputwriter.write("This is a test.");
+            outputwriter.flush();
+            outputwriter.close();
 
-            outputwriter.write("Username: "+ username);
-            outputwriter.write(("Password: "+ password));
-            outputwriter.write("Email: "+email);
+            //outputwriter.write("Username: "+ username);
+            //outputwriter.write(("Password: "+ password));
+            //outputwriter.write("Email: "+email);
+            //Log.d("logwriting:",outputwriter.getEncoding().toString());
         }catch (Exception e){
             e.printStackTrace();
         }

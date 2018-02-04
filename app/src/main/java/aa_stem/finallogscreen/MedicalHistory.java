@@ -19,17 +19,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.List;
 
 public class MedicalHistory extends AppCompatActivity {
 
     static final int READ_BLOCK_SIZE = 100;
     TextView showMedicalHistory;
+    String str;
+    DatabaseManagement databaseManagement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_history);
         showMedicalHistory = (TextView) findViewById(R.id.logHistory);
+
+        databaseManagement = new DatabaseManagement(this);
 
         final Button buttonHome = findViewById(R.id.btnHome);
 
@@ -64,17 +69,92 @@ public class MedicalHistory extends AppCompatActivity {
             }
         });
 
+
+        List<UserDetailsAndMedicalDetails> userDetailsAndMedicalDetails = databaseManagement.getAllMedicalHistory();
+
+        for (UserDetailsAndMedicalDetails cn : userDetailsAndMedicalDetails) {
+            str =  " MedicineName: " + cn.getMedicinename()
+                        +"\n "
+                        + " Dosage: " + cn.getDosageamount()
+                        +"\n "
+                        + " StartDate: " + cn.getStartdate()
+                        +"\n "
+                        + " StartTime: " + cn.getStarttime()
+                        +"\n "
+                        + " CellPhone: " + cn.getCellphone()
+                        +"\n "
+                        + " HomePhone: " + cn.getHomePhone()
+                        +"\n "
+                        ;
+
+            // Writing Contacts to log
+            Log.d("MedicineDetailsAre: ", str);
+        }
+        showMedicalHistory.setText(str);
+
+        //File interpath = getApplicationContext().getFilesDir();
+        //File file = new File(interpath,"trackhistory.txt");
+        //File outerpath = getApplicationContext().getExternalFilesDir(null);
+        //File file = new File(outerpath,"trackhistory.txt");
+
+
+        //Log.d("filepath_outer:",file1.getAbsolutePath().toString());
+        //Log.d("filepath_inner:",file.getAbsolutePath().toString());
+
+
+        /*try{
+            //FileOutputStream stream = openFileOutput(file.getAbsolutePath().toString(),MODE_PRIVATE);
+            FileOutputStream stream = new FileOutputStream(new File("trackhistory.txt"));
+            Log.d("filepath_inner:",stream.getFD().toString());
+            OutputStreamWriter outputwriter = new OutputStreamWriter(stream);
+
+            outputwriter.write("Username: ");
+            outputwriter.write(("Password: "));
+        }catch (Exception e){
+            e.printStackTrace();
+        }*/
+
+
+        /*try{
+            FileInputStream fileInputStream = openFileInput(file.getAbsolutePath().toString());
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+
+            char[] inputBuffer = new char[READ_BLOCK_SIZE];
+            String str = "Writing Medical History:";
+            int charRead;
+
+            while ((charRead=inputStreamReader.read(inputBuffer))>0){
+
+                String strRead = String.copyValueOf(inputBuffer,0,charRead);
+                str += strRead;
+
+                Log.v("Stringcontents: ",str);
+
+            }
+
+            inputStreamReader.close();
+            showMedicalHistory.setText(str);
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }*/
+
+
     }
 
 
 
 
-    public void readHistory(View view){
+    public void Save(View view){
 
         File interpath = getApplicationContext().getFilesDir();
         File outerpath = getApplicationContext().getExternalFilesDir(null);
-        File file = new File(outerpath,"tracking.txt");
+        File file1 = new File(outerpath,"tracking.txt");
+        File file2 = new File(interpath,"tracking.txt");
 
+        Log.d("filepath_outer:",file1.getAbsolutePath().toString());
+
+        Log.d("filepath_inner:",file2.getAbsolutePath().toString());
 
 
 

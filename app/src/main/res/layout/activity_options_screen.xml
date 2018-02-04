@@ -42,7 +42,6 @@
         android:layout_marginTop="78dp"
         android:background="@drawable/button_shape"
         android:text="View Medical History"
-        android:onClick="readHistory"
         android:textColor="#F7FF1C"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="205dp" />
