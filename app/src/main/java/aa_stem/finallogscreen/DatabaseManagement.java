@@ -1,7 +1,5 @@
 package aa_stem.finallogscreen;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

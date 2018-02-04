@@ -1,9 +1,9 @@
 
 {
-	"buildFiles" : [ "/Users/mnaveed/AndroidApps/stemproj/app/CMakeLists.txt" ],
+	"buildFiles" : [ "C:/Users/neetu/projects/StemProjectAA/stemproj/app/CMakeLists.txt" ],
 	"cleanCommands" : 
 	[
-		"/Users/mnaveed/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/mnaveed/AndroidApps/stemproj/app/.externalNativeBuild/cmake/release/x86 --target clean"
+		"C:\\Users\\neetu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\neetu\\projects\\StemProjectAA\\stemproj\\app\\.externalNativeBuild\\cmake\\release\\x86 --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -12,27 +12,27 @@
 		{
 			"abi" : "x86",
 			"artifactName" : "native-lib",
-			"buildCommand" : "/Users/mnaveed/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/mnaveed/AndroidApps/stemproj/app/.externalNativeBuild/cmake/release/x86 --target native-lib",
+			"buildCommand" : "C:\\Users\\neetu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\neetu\\projects\\StemProjectAA\\stemproj\\app\\.externalNativeBuild\\cmake\\release\\x86 --target native-lib",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/mnaveed/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/mnaveed/Library/Android/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/mnaveed/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/mnaveed/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem /Users/mnaveed/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -isystem /Users/mnaveed/Library/Android/sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "/Users/mnaveed/AndroidApps/stemproj/app/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "/Users/mnaveed/AndroidApps/stemproj/app/.externalNativeBuild/cmake/release/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=C:/Users/neetu/AppData/Local/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=C:/Users/neetu/AppData/Local/Android/Sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem C:\\Users\\neetu\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem C:\\Users\\neetu\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem C:\\Users\\neetu\\AppData\\Local\\Android\\Sdk\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem C:/Users/neetu/AppData/Local/Android/Sdk/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "C:/Users/neetu/projects/StemProjectAA/stemproj/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/neetu/projects/StemProjectAA/stemproj/app/.externalNativeBuild/cmake/release/x86"
 				}
 			],
-			"output" : "/Users/mnaveed/AndroidApps/stemproj/app/build/intermediates/cmake/release/obj/x86/libnative-lib.so",
-			"toolchain" : "2519535295514595449"
+			"output" : "C:/Users/neetu/projects/StemProjectAA/stemproj/app/build/intermediates/cmake/release/obj/x86/libnative-lib.so",
+			"toolchain" : "4275179393"
 		}
 	},
 	"toolchains" : 
 	{
-		"2519535295514595449" : 
+		"4275179393" : 
 		{
-			"cCompilerExecutable" : "/Users/mnaveed/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
-			"cppCompilerExecutable" : "/Users/mnaveed/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+			"cCompilerExecutable" : "C:/Users/neetu/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/neetu/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
 		}
 	}
 }

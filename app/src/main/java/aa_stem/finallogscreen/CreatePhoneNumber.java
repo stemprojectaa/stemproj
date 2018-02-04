@@ -1,10 +1,8 @@
 package aa_stem.finallogscreen;
 
-import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,27 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.app.Activity;
-
-import java.util.Calendar;
 import java.util.Date;
-import aa_stem.finallogscreen.AlarmReceiver;
 import android.widget.Toast;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
-import android.view.View.OnClickListener;
-import android.telephony.SmsManager;
-import android.media.MediaPlayer;
-import android.media.RingtoneManager;
-import android.net.Uri;
 
 import java.util.HashMap;
-import java.util.Map;
-
 
 
 public class CreatePhoneNumber extends AppCompatActivity {

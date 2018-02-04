@@ -1,27 +1,18 @@
 package aa_stem.finallogscreen;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
-import android.widget.EditText;
 import java.util.Calendar;
-import java.util.Map;
-import android.util.Log;
 import android.widget.Toast;
 
 public class BasicSetup extends AppCompatActivity implements View.OnClickListener{
